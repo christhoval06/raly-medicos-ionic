@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> Raly Medicos App</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="ionic/css/ionic.css" rel="stylesheet">
+    <link href="ionic/css/ng-animation.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+
+</head>
+<body ng-app="RalyMedicosApp" animation="slide-left-right-ios7">
+
+<ion-nav-view animation="slide-right-left"></ion-nav-view>
+
+
+<script src="ionic/js/ionic.bundle.js"></script>
+<script src="ionic/js/angular/angular-local-storage.min.js"></script>
+
+<script src="js/app/app.js"></script>
+<script src="js/app/configs.js"></script>
+<script src="js/app/states.js"></script>
+
+
+<!-- SERVICES -->
+<script src="js/servicios/httpService.js"></script>
+<script src="js/servicios/userService.js"></script>
+<script src="js/servicios/PacientesService.js"></script>
+<script src="js/servicios/ResultadosService.js"></script>
+<script src="js/servicios/validationService.js"></script>
+
+<!-- CONTROLLERS -->
+<script src="js/controllers/MainController.js"></script>
+<script src="js/controllers/LoginController.js"></script>
+<script src="js/controllers/PacientesController.js"></script>
+<script src="js/controllers/ResultadosController.js"></script>
+<script src="js/controllers/MedicoController.js"></script>
+
+<!-- MODELS -->
+<script src="js/models/MenuModel.js"></script>
+<script src="js/models/PacienteModel.js"></script>
+<script src="js/models/ResultadoModel.js"></script>
+
+</body>
+</html>

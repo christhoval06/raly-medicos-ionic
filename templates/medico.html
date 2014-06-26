@@ -1,0 +1,130 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<ion-view title="Información del Médico">
+    <ion-content has-header="true" padding="true" scroll="true">
+        <div class="flash animate-if msg" ng-if="ismsg">
+            <span class="msg">{{ msg }}</span>
+            <i class="icon ion-close-round dismiss msg" ng-click="dismiss()"></i>
+        </div>
+
+        <form name="medicoForm" novalidate>
+            <div class="list list-inset">
+
+                <input type="hidden" name="tabla" value="medicos" ng-model="medico.tabla">
+                <input type="hidden" name="id" value="749" ng-model="medico.id" >
+
+                <label class="item item-input">
+                    <input type="text" name="usuario" placeholder="Usuario" required
+                           ng-model="medico.usuarioweb"
+                           ng-minlength="4"
+                           ng-maxlength="30"
+                           value="{{medico.usuarioweb}}">
+                    <i class="icon ion-checkmark-circled success input-success"
+                       ng-show="inputValid(medicoForm.usuario)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(medicoForm.usuario)"></i>
+                </label>
+
+                <label class="item item-input label">
+                    <input type="password" name="clave" placeholder="Clave" required
+                           ng-model="medico.claveweb"
+                           ng-minlength="4"
+                           value="{{medico.claveweb}}">
+                    <i class="icon ion-checkmark-circled success input-success"
+                       ng-show="inputValid(medicoForm.clave)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(medicoForm.clave)"></i>
+                </label>
+
+                <label class="item item-input label">
+                    <input type="password" name="clave1" placeholder="Repita la Clave" required
+                           ng-model="medico.claveweb1"
+                           ng-minlength="4"
+                           value="{{medico.claveweb1}}">
+                    <i class="icon ion-checkmark-circled success input-success"
+                       ng-show="isPasswdValid(medicoForm.clave, medicoForm.clave1)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="isPasswdInvalid(medicoForm.clave, medicoForm.clave1)"></i>
+                </label>
+
+                <label class="item item-input">
+                    <input type="text" name="nombre" placeholder="Nombre"
+                           value="{{medico.nombremedico}}"
+                           readonly>
+                </label>
+
+                <label class="item item-input">
+                    <input type="email" name="email" placeholder="e-mail" required
+                           ng-model="medico.email"
+                           ng-minlength="2"
+                           ng-maxlength="30"
+                           value="{{medico.email}}">
+                    <i class="icon ion-checkmark-circled success input-success"
+                       ng-show="inputValid(medicoForm.email)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(medicoForm.email)"></i>
+                </label>
+
+                <label class="item item-input">
+                    <i class="icon">*</i>
+                    <input type="email" name="emailnotificacion" placeholder="*e-mail de Notificaciones"
+                           ng-model="medico.emailnotificacion"
+                           ng-minlength="3"
+                           value="{{medico.emailnotificacion}}">
+                    <i class="icon ion-checkmark-circled success input-success"
+                       ng-show="inputValid(medicoForm.emailnotificacion)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(medicoForm.emailnotificacion)"></i>
+                </label>
+
+
+                <label class="item item-input">
+                    <input type="text" name="especialidad" placeholder="Especialidad"
+                           ng-model="medico.especialidad"
+                           ng-minlength="3"
+                           value="{{medico.especialidad}}">
+                    <i class="icon ion-checkmark-circled success input-success"
+                       ng-show="inputValid(medicoForm.especialidad)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(medicoForm.especialidad)"></i>
+                </label>
+
+                <label class="item item-input">
+                    <input type="text" name="lugartrabajo" placeholder="Lugar de Trabajo"
+                           ng-model="medico.lugartrabajo"
+                           ng-minlength="3"
+                           value="{{medico.lugartrabajo}}">
+                    <i class="icon ion-checkmark-circled success input-success"
+                       ng-show="inputValid(medicoForm.lugartrabajo)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(medicoForm.lugartrabajo)"></i>
+                </label>
+
+                <label class="item item-input">
+                    <input type="text" name="telefono" placeholder="Teléfonos"
+                           ng-model="medico.telefono"
+                           ng-minlength="3"
+                           value="{{medico.telefono}}">
+                    <i class="icon ion-checkmark-circled success input-success"
+                       ng-show="inputValid(medicoForm.telefono)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(medicoForm.telefono)"></i>
+                </label>
+
+                <label class="item item-input">
+                    <input type="text" name="apartado" placeholder="Apartado de Correo"
+                           ng-model="medico.apartado"
+                           ng-minlength="3"
+                           value="{{medico.apartado}}">
+                    <i class="icon ion-checkmark-circled success input-success"
+                       ng-show="inputValid(medicoForm.apartado)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(medicoForm.apartado)"></i>
+                </label>
+
+                 <span class="nota">(*) Llenelo solo si quiere que los resultados sean automáticamente enviados al correo indicado</span>
+
+                <button class="button button-block button-balanced" ng-click="submit(medicoForm)"
+                        ng-disabled="!(medicoForm.$dirty && medicoForm.$valid)">
+                    Actualizar
+                </button>
+
+                <div cg-busy="'loadingTracker'"></div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
+
+
+
+

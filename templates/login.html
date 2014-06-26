@@ -1,0 +1,51 @@
+<ion-view title="title">
+    <ion-content has-header="false" has-tabs="false" padding="true" class="signup-margin">
+        <!-- flash message -->
+        <div class="flash animate-if" ng-if="signupLoginError">
+            <span>{{ flashMessage }}</span>
+            <i class="icon ion-close-round dismiss"
+               ng-click="dismiss()"></i>
+        </div>
+        
+        <div>
+            <img src="img/logoApp.png">
+        </div>
+
+        <form name="signupLoginForm" novalidate>
+            <div class="list list-inset">
+                <!-- user name -->
+                <label class="item item-input">
+                    <i class="icon ion-person"></i>
+                    <input type="text" name="username" placeholder="Usuario" required
+                           ng-model="usuario.usuario"
+                           ng-minlength="2"
+                           ng-maxlength="12">
+                    <i class="icon ion-checkmark-circled success input-success" ng-show="inputValid(signupLoginForm.username)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(signupLoginForm.username)"></i>
+                </label>
+
+                <!-- user password -->
+                <label class="item item-input label">
+                    <i class="icon ion-locked"></i>
+                    <input type="password" name="password" placeholder="Clave" required
+                           ng-model="usuario.clave"
+                           ng-minlength="3">
+                    <i class="icon ion-checkmark-circled success input-success" ng-show="inputValid(signupLoginForm.password)"></i>
+                    <i class="icon ion-close-circled error input-error" ng-show="inputInvalid(signupLoginForm.password)"></i>
+                </label>
+
+                <button class="button button-block button-balanced" ng-click="submit(signupLoginForm)" ng-disabled="!(signupLoginForm.$dirty && signupLoginForm.$valid)">
+                    {{ title }}
+                </button>
+
+                <div cg-busy="'loadingTracker'"></div>
+            </div>
+        </form>
+
+        <div class="footer" style="height:100%; position:relative;">
+            <div style="height:10%; position:absolute; bottom:0px;">
+                hola mundo
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

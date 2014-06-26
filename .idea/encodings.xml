@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/index-debug.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/index-debugc.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/medico.raly.app.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/min/app.uncompress.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/min/controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/min/models.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/min/servicios.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/models" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/inicio.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/medico.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/pacientes.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/resultados.html" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
+

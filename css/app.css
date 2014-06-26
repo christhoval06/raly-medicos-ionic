@@ -1,0 +1,90 @@
+body {
+    cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+
+.item-input .icon {
+   min-width: 40px;
+   font-size: 30px;
+}
+
+.item-input .icon.input-success{
+    color: green;
+}
+
+.item-input .icon.input-error{
+    color: red;
+}
+
+
+
+
+/* PACIENTE */
+.paciente img{
+    width: 80px;
+    float: left;
+}
+
+.paciente h2, .paciente p{
+    padding-left: 30px;
+}
+
+.paciente.item-divider h2{
+    padding-left: 0px;
+}
+
+.resultados p, .paciente p {
+    font-size: 12px;
+    line-height: 10px;
+}
+
+.resultados a {
+    text-decoration: none;
+}
+
+
+span.nota{
+    color: rgb(126, 80, 80);
+    font-size: 12px;
+}
+
+
+span.label-tiny{
+    width: 5%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 100px;
+    -moz-box-flex: 1;
+    -moz-flex: 1 0 100px;
+    -ms-flex: 1 0 100px;
+    flex: 1 0 100px;
+    display: table;
+    padding: 7px 10px 7px 3px;
+    max-width: 200px;
+    color: #444;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+div.msg{
+    width: 100%;
+    height: 35px;
+    color: green;
+    padding: 10px;
+    border: 1px green solid;
+    border-radius: 5px;
+    background-color: greenyellow;
+}
+
+
+div.msg span.msg{
+    text-align: center;
+    display: inline;
+    font-weight: bold;
+}
+
+div.msg i.msg{
+    float: right;
+}
+
+div.msg i.msg:hover{
+    color: darkgreen;
+}
